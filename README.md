@@ -1,4 +1,4 @@
-#Yellow Overlay
+# Yellow Overlay
 ## What is this overlay ?
 The goal of this overlay is to get rid of bloatware associated to X11.
 To do so, it provides ebuids for (lightweight) Wayland native apps and text-only apps that replace libX11 dependant software.
