@@ -9,10 +9,10 @@ I test ebuild on an amd64 + intel i915 platfom with `-X` USE flag and x11-libs/l
 Feel free to test on your platform and share the results ;-). 
 
 ### KEYWORDS
-By default, all ebuilds are created with `KEYWORDS="~amd64 ~x86"`
+By default, all ebuilds are created with `KEYWORDS="\~amd64 \~x86"`
 
-If the software is working as expected on my platform, I replace "~amd64" with "amd64".
-I might be able to test building for/on AArch64 and thus, depending on the results, add a "[~]aarch64".
+If the software is working as expected on my platform, I replace "\~amd64" with "amd64".
+I might be able to test building for/on AArch64 and thus, depending on the results, add a "[\~]aarch64".
 
 ## Isses
 Issues are opened for :
