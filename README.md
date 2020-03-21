@@ -1,11 +1,18 @@
 #Yellow Overlay
 ## What is this overlay ?
 The goal of this overlay is to get rid of bloatware associated to X11.
-To do so, it provides ebuids for Wayland native apps and text-only apps that replace X11-only software.
+To do so, it provides ebuids for (lightweight) Wayland native apps and text-only apps that replace libX11 dependant software.
 
 ## Testing
 I test ebuild on an amd64 + intel i915 platfom with `-X` USE flag and x11-libs/libX11 masked.
-Testing on other platforms is would be very appreciated.
+
+Feel free to test on your platform and share the results ;-). 
+
+### KEYWORDS
+By default, all ebuilds are created with `KEYWORDS="~amd64 ~x86"`
+
+If the software is working as expected on my platform, I replace "~amd64" with "amd64".
+I might be able to test building for/on AArch64 and thus, depending on the results, add a "[~]aarch64".
 
 ## Isses
 Issues are opened for :
