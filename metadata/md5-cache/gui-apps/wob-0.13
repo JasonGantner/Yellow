@@ -1,0 +1,15 @@
+BDEPEND=dev-util/meson dev-libs/wayland-protocols dev-util/wayland-scanner man? ( >=app-text/scdoc-1.9.2 ) seccomp? ( sys-libs/libseccomp ) >=dev-util/meson-0.59.4 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install test
+DEPEND=dev-libs/wayland
+DESCRIPTION=Wayland Overlay Bar
+EAPI=8
+HOMEPAGE=https://github.com/francma/wob
+INHERIT=meson
+IUSE=man seccomp
+KEYWORDS=amd64
+LICENSE=ISC
+RDEPEND=dev-libs/wayland
+SLOT=0
+SRC_URI=https://github.com/francma/wob/releases/download/0.13/wob-0.13.tar.gz
+_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	d3d7da5aff94a677154819e0cb95ee36	meson	96bca76bf96533b38e3d4e09d1306490
+_md5_=23c9849e875f7ef7ff69cc5cd14470f6

@@ -12,7 +12,7 @@ SRC_URI="https://hg.sr.ht/~scoopta/${PN}/archive/v${PV}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="run drun dmenu"
+IUSE="+run +drun +dmenu"
 REQUIRED_USE="|| ( run drun dmenu )"
 
 DEPEND="x11-libs/gtk+ dev-libs/wayland"

@@ -6,15 +6,22 @@ EAPI=7
 inherit git-r3 meson
 
 DESCRIPTION="Displays keypresses on screen on supported compositors"
-HOMEPAGE="https://git.sr.ht/~sircmpwn/wshowkeys"
-EGIT_REPO_URI="${HOMEPAGE}"
+# HOMEPAGE="https://git.sr.ht/~sircmpwn/wshowkeys"
+HOMEPAGE="https://github.com/ammgws/wshowkeys"
+EGIT_REPO_URI="${HOMEPAGE}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/libinput dev-libs/wayland x11-libs/cairo x11-libs/libxkbcommon x11-libs/pango virtual/udev"
+DEPEND="
+	dev-libs/libinput
+	dev-libs/wayland
+	x11-libs/cairo
+	x11-libs/libxkbcommon
+	x11-libs/pango
+	virtual/udev"
 RDEPEND="${DEPEND}"
 BDEPEND="dev-vcs/git dev-util/meson"
 
