@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/cyclopsian/wdisplays"
 EGIT_REPO_URI="https://github.com/luispabon/wdisplays.git"
 
 
-LICENSE="MIT GPL-3.0 CC0 CC-BY-SA-4.0"
+LICENSE="MIT GPL-3+ CC0 CC-BY-SA-4.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+scour"

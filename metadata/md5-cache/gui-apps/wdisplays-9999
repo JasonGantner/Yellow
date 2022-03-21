@@ -7,9 +7,9 @@ HOMEPAGE=https://github.com/cyclopsian/wdisplays
 INHERIT=git-r3 meson
 IUSE=+scour
 KEYWORDS=~amd64 ~x86
-LICENSE=MIT GPL-3.0 CC0 CC-BY-SA-4.0
+LICENSE=MIT GPL-3+ CC0 CC-BY-SA-4.0
 PROPERTIES=live
 RDEPEND=>=x11-libs/gtk+-3.24 media-libs/libepoxy dev-libs/wayland
 SLOT=0
 _eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	python-utils-r1	d3d7da5aff94a677154819e0cb95ee36	meson	96bca76bf96533b38e3d4e09d1306490
-_md5_=4a7f7811fa788002731f5f2a7074e9e9
+_md5_=281dab563c691857e55248751784046d
