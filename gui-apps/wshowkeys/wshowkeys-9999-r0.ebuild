@@ -6,8 +6,8 @@ EAPI=7
 inherit git-r3 meson
 
 DESCRIPTION="Displays keypresses on screen on supported compositors"
-#HOMEPAGE="https://git.sr.ht/~sircmpwn/wshowkeys"
-HOMEPAGE="https://github.com/ammgws/wshowkeys
+# HOMEPAGE="https://git.sr.ht/~sircmpwn/wshowkeys"
+HOMEPAGE="https://github.com/ammgws/wshowkeys"
 EGIT_REPO_URI="${HOMEPAGE}.git"
 
 LICENSE="GPL-3"
