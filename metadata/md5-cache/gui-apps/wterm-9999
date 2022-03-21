@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig dev-libs/wayland-protocols >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile unpack
+DEPEND=media-libs/fontconfig x11-libs/libxkbcommon x11-libs/pixman drm? ( x11-libs/libdrm[video_cards_intel?,video_cards_nouveau?] ) wayland? ( dev-libs/wayland )
+DESCRIPTION=xterm (st fork) for wayland
+EAPI=7
+HOMEPAGE=https://github.com/majestrate/wterm
+INHERIT=git-r3
+IUSE=debug +drm +video_cards_intel video_cards_nouveau +wayland
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=media-libs/fontconfig x11-libs/libxkbcommon x11-libs/pixman drm? ( x11-libs/libdrm[video_cards_intel?,video_cards_nouveau?] ) wayland? ( dev-libs/wayland )
+REQUIRED_USE=wayland drm video_cards_intel
+SLOT=0
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_md5_=35f6ef06263dd62394a5476bf4550afe

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<longdescription>
+A fork of st made to run natively under wayland
+</longdescription>
+<maintainer type="person">
+<email>jason@gantner.pw</email>
+<name>Jason Gantner</name>
+<description>
+Gentoo Newbie trying to get rid of X11 in favor of wayland.
+Any help would be greatly appreciated.
+</description>
+</maintainer>
+<use>
+<flag name="drm">
+Enable DRM backend
+</flag>
+<flag name="video_cards_intel">
+Enable intel driver for DRM backend
+</flag>
+<flag name="video_cards_nouveau">
+Enable nouveau driver for DRM backend
+</flag>
+<flag name="pixman">
+Enable pixman support
+</flag>
+<flag name="wayland">
+Enable Wayland backend (default)
+</flag>
+</use>
+<upstream>
+<bugs-to>
+https://github.com/majestrate/wterm/issues
+</bugs-to>
+</upstream>
+</pkgmetadata>
