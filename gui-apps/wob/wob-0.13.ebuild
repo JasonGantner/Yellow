@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-util/meson
 	dev-libs/wayland-protocols
-	dev-libs/wayland-scanner
+	dev-util/wayland-scanner
 	man? ( >=app-text/scdoc-1.9.2 )
 	seccomp? ( sys-libs/libseccomp )"
 
