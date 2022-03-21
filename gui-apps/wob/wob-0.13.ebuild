@@ -7,7 +7,7 @@ inherit meson
 
 DESCRIPTION="Wayland Overlay Bar"
 HOMEPAGE="https://github.com/francma/wob"
-SRC_URI="https://github.com/francma/${PN}/releases/download/${V}/${P}.tar.gz"
+SRC_URI="https://github.com/francma/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
@@ -23,7 +23,7 @@ BDEPEND="
 	man? ( >=app-text/scdoc-1.9.2 )
 	seccomp? ( sys-libs/libseccomp )"
 
-src_configure {
+src_configure (){
 	local emesonargs=(
 		$(meson_feature seccomp)
 		$(meson_feature man man-pages)
@@ -31,15 +31,15 @@ src_configure {
 	meson_src_configure
 }
 
-src_compile{
+src_compile(){
 	meson_src_compile
 }
 
-src_test{
+src_test(){
 	meson_src_test
 }
 
-src_install {
+src_install(){
 	meson_src_install
 }
 
