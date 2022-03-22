@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/cyclopsian/wdisplays"
 #EGIT_REPO_URI="https://github.com/cyclopsian/wdisplays.git"
 EGIT_REPO_URI="https://github.com/artizirk/wdisplays.git"
 
-
 LICENSE="MIT GPL-3+ CC0-1.0 CC-BY-SA-4.0"
 SLOT="0"
 KEYWORDS="~amd64"
