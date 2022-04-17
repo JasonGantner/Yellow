@@ -12,5 +12,5 @@ PROPERTIES=live
 RDEPEND=media-libs/fontconfig x11-libs/libxkbcommon pixman? ( x11-libs/pixman ) drm? ( x11-libs/libdrm[video_cards_intel?,video_cards_nouveau?] ) wayland? ( dev-libs/wayland )
 REQUIRED_USE=|| ( wayland drm ) drm? ( || ( video_cards_intel video_cards_nouveau ) )
 SLOT=0
-_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
 _md5_=5e9389b13f45ca9f272fd6435980aa18
