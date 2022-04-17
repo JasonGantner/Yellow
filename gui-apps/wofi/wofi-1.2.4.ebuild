@@ -7,7 +7,7 @@ inherit meson
 
 DESCRIPTION="A lancher/menu program for wlroots based compositors"
 HOMEPAGE="https://hg.sr.ht/~scoopta/wofi"
-SRC_URI="https://hg.sr.ht/~scoopta/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://hg.sr.ht/~scoopta/${PN}/archive/v${PV}.tar.gz -> ${P}.tag.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

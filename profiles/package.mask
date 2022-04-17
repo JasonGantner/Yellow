@@ -1,0 +1,15 @@
+# Jason André Charles Gantner <jason@gantner.pw> (2022-04-17)
+# Live ebuild
+=gui-apps/wshowkeys-9999
+
+# Jason André Charles Gantner <jason@gantner.pw> (2022-04-17)
+# Live ebuild
+=gui-apps/wterm-9999
+
+# Jason André Charles Gantner <jason@gantner.pw> (2022-04-17)
+# Live ebuild
+=gui-apps/wshowkeys-9999
+
+# Jason André Charles Gantner <jason@gantner.pw> (2022-04-17)
+# Live ebuild
+=gui-apps/wdisplays-9999

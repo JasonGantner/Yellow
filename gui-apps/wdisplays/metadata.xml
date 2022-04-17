@@ -2,12 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer type="person">
-<email>jason@gantner.pw</email>
-<name>Jason Gantner</name>
+	<email>jason@gantner.pw</email>
+	<name>Jason André Charles Gantner</name>
 </maintainer>
-<upstream>
-<bugs-to>
-https://github.com/cyclopsian/wdisplays/issues
-</bugs-to>
-</upstream>
+<use>
+<flag name="scour">Optimize SVG data using <pkg>media-gfx/scour</pkg></flag>
+</use>
 </pkgmetadata>
