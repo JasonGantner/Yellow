@@ -1,0 +1,15 @@
+diff --git a/config.mk b/config.mk
+index c1946ee..fc90de1 100644
+--- a/config.mk
++++ b/config.mk
+@@ -1 +0,0 @@
+-
+@@ -4,4 +3,0 @@ VERSION = 0.7
+-ENABLE_INTEL = 1
+-ENABLE_NOUVEAU = 1
+-
+-CFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=700
+@@ -9 +5 @@ CFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=700
+-PREFIX=/usr/local
++PREFIX=$(D)/usr/
+
