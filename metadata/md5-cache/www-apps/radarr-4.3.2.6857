@@ -1,0 +1,12 @@
+BDEPEND=sys-apps/yarn >=net-libs/nodejs-12.0.0
+DEFINED_PHASES=configure
+DEPEND=x11-libs/gtk+ dev-libs/wayland
+DESCRIPTION=A fork of Sonarr to work with movies a la Couchpotato
+EAPI=8
+HOMEPAGE=https://www.radarr.video
+KEYWORDS=~amd64 ~x86 ~arm64
+LICENSE=GPL-3
+RDEPEND=acct-group/radarr acct-user/radarr x11-libs/gtk+ dev-libs/wayland
+SLOT=0
+SRC_URI=https://github.com/Radarr/Radarr/archive/refs/tags/v4.3.2.6857.tar.gz -> radarr-4.3.2.6857.tar.gz
+_md5_=4bd6181cb1af8d5f444b8f83695df49d

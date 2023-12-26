@@ -1,4 +1,4 @@
-BDEPEND=dev-util/meson >=dev-libs/wayland-protocols-1.17 dev-util/wayland-scanner scour? ( media-gfx/scour ) >=dev-vcs/git-1.8.2.1[curl] >=dev-util/meson-0.59.4 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+BDEPEND=dev-util/meson >=dev-libs/wayland-protocols-1.17 dev-util/wayland-scanner scour? ( media-gfx/scour ) >=dev-vcs/git-1.8.2.1[curl] >=dev-util/meson-1.2.1 app-alternatives/ninja dev-util/meson-format-array
 DEFINED_PHASES=compile configure install test unpack
 DEPEND=>=x11-libs/gtk+-3.24 media-libs/libepoxy dev-libs/wayland
 DESCRIPTION=wdisplays is a wayland app for configuring displays in compositors.
@@ -11,5 +11,5 @@ LICENSE=MIT GPL-3+ CC0-1.0 CC-BY-SA-4.0
 PROPERTIES=live
 RDEPEND=>=x11-libs/gtk+-3.24 media-libs/libepoxy dev-libs/wayland
 SLOT=0
-_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	python-utils-r1	59dddabd6a41ab69723654916142f63b	meson	2d8a51910bc57e004c37aa55c7d99ce4
+_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	474cb53a7d1b62721a91809a1d702661	meson	576e6bbef90e9753368f8b4ad0bd5383
 _md5_=0ee73f950bd9667b97da00a48de7c810
