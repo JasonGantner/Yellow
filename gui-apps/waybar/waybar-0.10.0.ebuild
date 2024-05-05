@@ -54,7 +54,7 @@ DEPEND="${RDEPEND}
 	gui-libs/wlroots:=
 	x11-libs/libxkbcommon
 	test? ( dev-cpp/catch:0 )
-	cava? ( >=media-sound/cava-0.10.1[jack?,pipewire?,pulseaudio?,sndio?] )
+	cava? ( >=media-libs/libcava-0.10.1[jack?,pipewire?,pulseaudio?,sndio?] )
 	evdev? ( dev-libs/libevdev:= )
 	jack? ( virtual/jack )
 	libcxx? ( sys-libs/libcxx )
