@@ -23,8 +23,8 @@ DEPEND="
 	x11-libs/pango
 	virtual/udev"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-vcs/git dev-util/meson"
+BDEPEND="dev-vcs/git dev-build/meson"
 
 pkg_preinst(){
-	chmod u+s ${D}/usr/bin/wshowkeys
+	chmod u+s "${D}/usr/bin/wshowkeys"
 }

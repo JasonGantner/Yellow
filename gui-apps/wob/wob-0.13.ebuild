@@ -17,7 +17,7 @@ IUSE="man seccomp"
 DEPEND="dev-libs/wayland"
 RDEPEND="${DEPEND}"
 BDEPEND="
-	dev-util/meson
+	dev-build/meson
 	dev-libs/wayland-protocols
 	dev-util/wayland-scanner
 	man? ( >=app-text/scdoc-1.9.2 )

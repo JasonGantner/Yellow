@@ -9,6 +9,8 @@ DESCRIPTION="A lancher/menu program for wlroots based compositors"
 HOMEPAGE="https://hg.sr.ht/~scoopta/wofi"
 SRC_URI="https://hg.sr.ht/~scoopta/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/${PN}-v${PV}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
@@ -17,9 +19,7 @@ REQUIRED_USE="|| ( run drun dmenu )"
 
 DEPEND="x11-libs/gtk+ dev-libs/wayland"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/meson virtual/pkgconfig"
-
-S="${WORKDIR}/${PN}-v${PV}"
+BDEPEND="dev-build/meson virtual/pkgconfig"
 
 src_configure(){
 	meson_src_configure $(meson_use run enable_run) $(meson_use drun enable_drun) $(meson_use dmenu enable_dmenu)
