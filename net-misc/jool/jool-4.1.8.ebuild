@@ -91,4 +91,4 @@ src_install(){
 	dodoc src/*/*/*.?
 }
 
-# vim: set syntax=modeline notabexpand:
+# vim: set syntax=modeline notabexpand

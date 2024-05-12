@@ -1,4 +1,4 @@
-BDEPEND=sys-kernel/linux-headers tools? ( || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7 ) doc? ( www-apps/jekyll ) dist-kernel? ( virtual/dist-kernel ) verify-sig? ( app-crypt/gnupg >=app-portage/gemato-16 ) sys-devel/gnuconfig >=app-portage/elt-patches-20170815
+BDEPEND=sys-kernel/linux-headers tools? ( sys-devel/gnuconfig || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 ) doc? ( www-apps/jekyll ) dist-kernel? ( virtual/dist-kernel ) verify-sig? ( app-crypt/gnupg >=app-portage/gemato-20 ) >=app-portage/elt-patches-20240116
 DEFINED_PHASES=compile install postinst postrm preinst prepare pretend setup unpack
 DEPEND=iptables? ( net-firewall/iptables ) kernel_linux? ( sys-apps/kmod[tools] dist-kernel? ( virtual/dist-kernel:= ) ) kernel_linux? ( virtual/linux-sources virtual/libelf )
 DESCRIPTION=An Open Source implementation of multiple NAT64 RFC for linux
@@ -12,5 +12,5 @@ RDEPEND=iptables? ( net-firewall/iptables ) kernel_linux? ( sys-apps/kmod[tools]
 REQUIRED_USE=|| ( nat64 siit )
 SLOT=0
 SRC_URI=https://github.com/NICMx/Jool/releases/download/v4.1.8/jool-4.1.8.tar.gz verify-sig? ( https://github.com/NICMx/Jool/releases/download/v4.1.8/jool-4.1.8.tar.gz.asc )
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod	65030ccb60b8a236bc29c8caa76e3815	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	verify-sig	798e0173d334021f14ba78a786c37059	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	autotools	6ae9a4347149b19a112caa1182d03bde
-_md5_=24f52e2fd3d7f1045ae7236e09f6f36d
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	7ca3057b277f1e5978947b4cc289ce62	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	linux-mod	000f3723e8e062061ee523106e69f84a	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	verify-sig	a79ba011daaf532d71a219182474d150	gnuconfig	a397adda6984a4c423e28ac274c1ba98	libtool	5f49a16f67f81bdf873e3d1f10b10001	autotools	dc70c1dc473b68317fc4a86f5fbfc57d
+_md5_=fdc8138c174a47255a69994b06f22ed7

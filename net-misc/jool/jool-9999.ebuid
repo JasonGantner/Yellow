@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit linux-mod git-r3
+inherit linux-mod-r1 git-r3
 
 DESCRIPTION="An Open Source implementaion of SIIT and NAT64 for linux"
 HOMEPAGE="https://jool.mx/"
@@ -67,4 +67,4 @@ src_install(){
 	fi
 }
 
-# vim: set syntax=modeline notabexpand:
+# vim: set syntax=modeline notabexpand
