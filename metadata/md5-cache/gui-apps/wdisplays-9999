@@ -1,9 +1,9 @@
-BDEPEND=dev-util/meson >=dev-libs/wayland-protocols-1.17 dev-util/wayland-scanner scour? ( media-gfx/scour ) >=dev-vcs/git-1.8.2.1[curl] >=dev-util/meson-1.2.1 app-alternatives/ninja dev-util/meson-format-array
+BDEPEND=dev-build/meson >=dev-libs/wayland-protocols-1.17 dev-util/wayland-scanner scour? ( media-gfx/scour ) >=dev-vcs/git-1.8.2.1[curl] >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 DEFINED_PHASES=compile configure install test unpack
 DEPEND=>=x11-libs/gtk+-3.24 media-libs/libepoxy dev-libs/wayland
 DESCRIPTION=wdisplays is a wayland app for configuring displays in compositors.
 EAPI=7
-HOMEPAGE=https://github.com/cyclopsian/wdisplays
+HOMEPAGE=https://github.com/artizirk/wdisplays
 INHERIT=git-r3 meson
 IUSE=+scour
 KEYWORDS=~amd64
@@ -11,5 +11,5 @@ LICENSE=MIT GPL-3+ CC0-1.0 CC-BY-SA-4.0
 PROPERTIES=live
 RDEPEND=>=x11-libs/gtk+-3.24 media-libs/libepoxy dev-libs/wayland
 SLOT=0
-_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	474cb53a7d1b62721a91809a1d702661	meson	576e6bbef90e9753368f8b4ad0bd5383
-_md5_=0ee73f950bd9667b97da00a48de7c810
+_eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	d309b9713dfc18e754cba88d3ba69653	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	python-utils-r1	e527bb25fc6ab8bb127b889b8f62500a	meson	aecae905c2e0c201d7925fae52a5576d
+_md5_=88f35efe5ee9373eec2af87f5e5278c5

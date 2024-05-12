@@ -6,8 +6,8 @@ EAPI=7
 inherit git-r3 meson
 
 DESCRIPTION="wdisplays is a wayland app for configuring displays in compositors."
-HOMEPAGE="https://github.com/cyclopsian/wdisplays"
-# Original git repo no disappeared
+HOMEPAGE="https://github.com/artizirk/wdisplays"
+# Original git repo now disappeared
 # EGIT_REPO_URI="https://github.com/cyclopsian/wdisplays.git"
 EGIT_REPO_URI="https://github.com/artizirk/wdisplays.git"
 
@@ -22,7 +22,7 @@ DEPEND="
 	dev-libs/wayland"
 RDEPEND="${DEPEND}"
 BDEPEND="
-	dev-util/meson
+	dev-build/meson
 	>=dev-libs/wayland-protocols-1.17
 	dev-util/wayland-scanner
 	scour? ( media-gfx/scour )"

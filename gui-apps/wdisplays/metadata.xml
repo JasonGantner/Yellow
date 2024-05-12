@@ -8,4 +8,7 @@
 <use>
 <flag name="scour">Optimize SVG data using <pkg>media-gfx/scour</pkg></flag>
 </use>
+<upstream>
+<remote-id type="github">artizirk/wdisplays</remote-id>
+</upstream>
 </pkgmetadata>
