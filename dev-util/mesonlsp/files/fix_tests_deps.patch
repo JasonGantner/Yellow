@@ -1,0 +1,7 @@
+diff --git a/meson.build b/meson.build
+index ff0f0c3..a830ae0 100644
+--- a/meson.build
++++ b/meson.build
+@@ -156 +156 @@ subdir('src')
+-if not gtest_dep.found()
++if not gtest_dep.found() and get_option('tests')
