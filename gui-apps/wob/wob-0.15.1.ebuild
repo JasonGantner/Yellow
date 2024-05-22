@@ -12,12 +12,14 @@ SRC_URI="https://github.com/francma/${PN}/releases/download/${PV}/${P}.tar.gz"
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="+man seccomp"
+IUSE="+man seccomp test"
+RESTRICT="!test? ( test )"
 
 DEPEND="
 	dev-libs/wayland
 	dev-libs/inih
 	seccomp? ( sys-libs/libseccomp )
+	test? ( dev-util/cmocka )
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="
