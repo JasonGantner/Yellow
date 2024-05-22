@@ -24,18 +24,18 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="jemalloc mimalloc +system_tree-sitter static test"
+IUSE="jemalloc mimalloc static test"
 REQUIRED_USE="?? ( jemalloc mimalloc )"
 RESTRICT="!test? ( test )"
 DEPEND="
 	jemalloc? ( dev-libs/jemalloc )
 	mimalloc? ( dev-libs/mimalloc )
-	system_tree-sitter? ( dev-libs/tree-sitter )
 	test? ( dev-cpp/gtest )
 	app-arch/libarchive
 	dev-cpp/nlohmann_json
 	dev-cpp/tomlplusplus
 	dev-util/pkgconf
+	dev-libs/tree-sitter
 	net-misc/curl
 	sys-apps/util-linux
 	static? (

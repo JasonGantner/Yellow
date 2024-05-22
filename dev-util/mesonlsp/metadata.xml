@@ -7,7 +7,6 @@
 	</maintainer>
 	<use>
 		<flag name="mimalloc"> Use dev-libs/mimalloc for memory management</flag>
-		<flag name="system_tree-sitter">Use standard dev-libs/tree-sitter instead of custom impl</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">JCWasmx86/mesonlsp</remote-id>

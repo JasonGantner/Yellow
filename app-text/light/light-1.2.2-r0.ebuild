@@ -9,12 +9,11 @@ SRC_URI="https://github.com/JasonGantner/${PN}/archive/v${PV}.tar.gz -> ${P}.tar
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64"
 IUSE="udev"
 
 DEPEND="udev? ( virtual/udev )"
 RDEPEND="${DEPEND}"
-BDEPEND=""
 
 src_configure(){
 	./autogen.sh

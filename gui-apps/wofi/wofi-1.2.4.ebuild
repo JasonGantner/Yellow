@@ -13,7 +13,7 @@ S="${WORKDIR}/${PN}-v${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64"
 IUSE="+run +drun +dmenu"
 REQUIRED_USE="|| ( run drun dmenu )"
 
