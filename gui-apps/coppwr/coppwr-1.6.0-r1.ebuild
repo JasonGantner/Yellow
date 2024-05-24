@@ -460,8 +460,8 @@ QA_FLAGS_IGNORED="usr/bin/${PN}"
 src_install(){
 	domenu assets/io.github.dimtpap.coppwr.desktop
 	for size in 32 48 64 128 256 512;do
-		doicon -s ${size} assets/icon/${size}.png
+		newicon -s ${size} assets/icon/${size}.png io.github.dimtpap.coppwr.png
 	done
-	doicon -s scalable assets/icon/scalable.svg
-	default
+	newicon -s scalable assets/icon/scalable.svg io.github.dimtpap.coppwr.svg
+	cargo_src_install
 }
