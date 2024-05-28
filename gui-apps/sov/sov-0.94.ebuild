@@ -16,10 +16,7 @@ KEYWORDS="~amd64"
 DEPEND="
 	dev-libs/wayland
 	dev-libs/wayland-protocols
-	gui-libs/egl-wayland
-	gui-libs/eglexternalplatform
 	media-libs/freetype
-	media-libs/glew
 	media-libs/libglvnd
 	media-libs/libpng
 	x11-libs/libxkbcommon
@@ -33,5 +30,5 @@ BDEPEND="
 	"
 
 pkg_postinst(){
-	elog "upstream lists media-fonts/terminus-font as dependency"
+	elog "upstream lists media-fonts/terminus-font as dependency but it seems optionnal to me"
 }
