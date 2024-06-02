@@ -15,12 +15,13 @@ HOMEPAGE="https://alacritty.org"
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/alacritty/alacritty"
 else
 	SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v${MY_PV}.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}"
 	KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
 fi
+
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
@@ -28,23 +29,21 @@ LICENSE+="
 	Apache-2.0 BSD-2 BSD Boost-1.0 CC0-1.0 ISC MIT MPL-2.0
 	Unicode-DFS-2016
 "
+
 SLOT="0"
-IUSE="wayland +X"
+
+IUSE="+wayland X sixel doc"
 
 REQUIRED_USE="|| ( wayland X )"
 
-COMMON_DEPEND="
+DEPEND="
 	media-libs/fontconfig:=
 	media-libs/freetype:2
 	x11-libs/libxkbcommon
 	X? ( x11-libs/libxcb:= )
 "
 
-DEPEND="
-	${COMMON_DEPEND}
-"
-
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${DEPEND}
 	media-libs/mesa[X?,wayland?]
 	sys-libs/zlib
 	sys-libs/ncurses:0
@@ -64,10 +63,15 @@ BDEPEND="
 
 QA_FLAGS_IGNORED="usr/bin/alacritty"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
-
 src_unpack() {
 	if [[ "${PV}" == *9999* ]]; then
+		if use sixel;then
+			UPSTREAM=ayosec
+			EGIT_BRANCH=graphics
+		else
+			UPSTREAM="${PN}"
+		fi
+		EGIT_REPO_URI="https://github.com/${UPSTREAM}/alacritty"
 		git-r3_src_unpack
 		cargo_live_src_unpack
 	else
@@ -115,10 +119,13 @@ src_install() {
 	insinto /usr/share/alacritty/scripts
 	doins -r scripts/*
 
-	local DOCS=(
-		CHANGELOG.md README.md
-	)
-	einstalldocs
+	if use doc; then
+		local DOCS=(
+			CHANGELOG.md
+			README.md
+		)
+		einstalldocs
+	fi
 }
 
 src_test() {
@@ -131,7 +138,7 @@ pkg_postinst() {
 		einfo "Configuration files for ${CATEGORY}/${PN}"
 		einfo "in \$HOME often need to be updated after a version change"
 		einfo ""
-		einfo "For information on how to configure alacritty, see the manpage:"
-		einfo "man 5 alacritty"
+		einfo "For information on how to configure ${PN}, see the manpage:"
+		einfo "man 5 ${PN}"
 	fi
 }
