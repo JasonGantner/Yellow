@@ -1,15 +1,14 @@
-# Copyright 2020 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v2
+# SPDX-License-Identifier: GPL-2.0 or ISC
+# Copyright 2020-2024 Jason André Charles Gantner
+# Distributed under the terms of the ISC License
 
-EAPI=7
+EAPI=8
 
 inherit git-r3 meson
 
 DESCRIPTION="wdisplays is a wayland app for configuring displays in compositors."
 HOMEPAGE="https://github.com/artizirk/wdisplays"
-# Original git repo now disappeared
-# EGIT_REPO_URI="https://github.com/cyclopsian/wdisplays.git"
-EGIT_REPO_URI="https://github.com/artizirk/wdisplays.git"
+EGIT_REPO_URI="https://github.com/artizirk/${PN}.git"
 
 LICENSE="MIT GPL-3+ CC0-1.0 CC-BY-SA-4.0"
 SLOT="0"

@@ -1,7 +1,8 @@
-# Copyright 2020 Gentoo Authors
-# Distributed under the terms of the GNU General Public License v2
+# SPDX-License-Identifier: GPL-2.0 OR ISC
+# Copyright 2020-2024 Jason André Charles Gantner
+# Distributed under the terms of the ISC License
 
-EAPI=7
+EAPI=8
 
 inherit meson
 
@@ -13,7 +14,7 @@ S="${WORKDIR}/${PN}-v${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64"
 IUSE="+run +drun +dmenu"
 REQUIRED_USE="|| ( run drun dmenu )"
 

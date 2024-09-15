@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jason@gantner.pw</email>
+		<name>Jason André Charles Gantner</name>
+	</maintainer>
+	<use>
+		<flag name="mimalloc"> Use dev-libs/mimalloc for memory management</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">JCWasmx86/mesonlsp</remote-id>
+	</upstream>
+</pkgmetadata>
