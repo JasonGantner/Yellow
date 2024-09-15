@@ -1,0 +1,24 @@
+diff --git a/src/wld/config.mk b/src/wld/config.mk
+index 8f3ee29..71236e6 100644
+--- a/src/wld/config.mk
++++ b/src/wld/config.mk
+@@ -2,5 +1,0 @@
+-
+-CC                  = gcc
+-CFLAGS              = -pipe
+-
+-ENABLE_DEBUG        = 1
+@@ -11,2 +5,0 @@ ENABLE_PIXMAN       = 1
+-ENABLE_DRM          = 1
+-ENABLE_WAYLAND      = 1
+@@ -14 +7,9 @@ ENABLE_WAYLAND      = 1
+-DRM_DRIVERS         = intel nouveau
++DRM_DRIVERS         = 
++
++ifeq ($(ENABLE_INTEL),1)
++	DRM_DRIVERS += intel
++endif
++ifeq ($(ENABLE_NOUVEAU),1)
++	DRM_DRIVERS += nouveau
++endif
++

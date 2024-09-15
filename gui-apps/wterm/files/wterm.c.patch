@@ -1,0 +1,7 @@
+diff --git a/src/wterm.c b/src/wterm.c
+index c655722..76ccbb8 100644
+--- a/src/wterm.c
++++ b/src/wterm.c
+@@ -3947 +3947 @@ void usage(void) {
+-  die("%1$s " VERSION " (c) 2010-2015 st engineers, 2015-2019 wterm engineers\n"
++  die("%1$s VERSION (c) 2010-2015 st engineers, 2015-2019 wterm engineers\n"

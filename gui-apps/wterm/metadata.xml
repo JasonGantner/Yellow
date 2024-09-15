@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+<email>jason@gantner.pw</email>
+<name>Jason Gantner</name>
+</maintainer>
+<use>
+<flag name="drm">Enable DRM backend</flag>
+<flag name="pixman">Enable pixman support</flag>
+<flag name="wayland">Enable Wayland backend (default)</flag>
+</use>
+<upstream>
+<remote-id type="github">majestrate/wterm</remote-id>
+<bugs-to>https://github.com/majestrate/wterm/issues</bugs-to>
+</upstream>
+</pkgmetadata>
