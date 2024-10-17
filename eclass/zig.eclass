@@ -71,7 +71,9 @@ zig_src_install() {
 	insopts -m0755
 	doins -r bin
 }
-
+# @FUNCTION: zig_src_test
+# @DESCRIPTION:
+# Run unit tests through `zig build test`
 zig_src_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
