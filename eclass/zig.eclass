@@ -61,15 +61,20 @@ zig_src_compile() {
 
 # @FUNCTION: zig_src_install
 # @DESCRIPTION:
-# Install the generated packages
+# Install the generated files
 zig_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	cd zig-out || die
 	insinto "${EPREFIX}/usr"
-	doins -r share
+	test -d include && doins -r include
+	test -d lib && doins -r lib
+	test -d lib64 && doins -r lib64
+	test -d libexec && doins -r libexec
+	test -d share && doins -r share
 	insopts -m0755
-	doins -r bin
+	test -d bin && doins -r bin
+	test -d sbin && doins -r sbin
 }
 # @FUNCTION: zig_src_test
 # @DESCRIPTION:

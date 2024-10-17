@@ -33,6 +33,9 @@ BDEPEND="
 		>=dev-lang/zig-0.11.0
 		>=dev-lang/zig-bin-0.11.0
 	)
+	dev-libs/wayland-protocols
+	dev-util/wayland-scanner
+	virtual/pkgconfig
 	"
 
 src_unpack() {
