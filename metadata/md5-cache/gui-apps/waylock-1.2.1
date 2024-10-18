@@ -1,0 +1,13 @@
+BDEPEND=app-text/scdoc virtual/pkgconfig verify-sig? ( sec-keys/openpgp-keys-ifreund ) verify-sig? ( app-crypt/gnupg >=app-portage/gemato-20 ) || ( dev-lang/zig dev-lang/zig-bin )
+DEFINED_PHASES=compile install test unpack
+DEPEND=dev-libs/wayland dev-libs/wayland-protocols sys-libs/pam x11-libs/xkbcommon
+EAPI=8
+INHERIT=verify-sig zig
+IUSE=verify-sig debug
+KEYWORDS=~amd64
+LICENSE=ISC
+RDEPEND=dev-libs/wayland dev-libs/wayland-protocols sys-libs/pam x11-libs/xkbcommon
+SLOT=0
+SRC_URI=https://codeberg.org/ifreund/zig-wayland/archive/v0.2.0.tar.gz -> zig-wayland-0.2.0.tar.gz https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.2.0.tar.gz -> zig-xkbcommon-0.2.0.tar.gz https://codeberg.org/ifreund/waylock/releases/download/v1.2.1/waylock-1.2.1.tar.gz verify-sig? ( https://codeberg.org/ifreund/waylock/releases/download/v1.2.1/waylock-1.2.1.tar.gz.sig )
+_eclasses_=verify-sig	745dccb7d4656514f1e966cce314d7db	zig	327623c33625262286df348490d5879a
+_md5_=7927046cf7731d179b2c5acbbf94569b
