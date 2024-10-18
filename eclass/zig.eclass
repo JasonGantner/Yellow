@@ -56,25 +56,42 @@ zig_src_compile() {
 	# TODO add flags deduplication and cleanup
 	set -- zig build ${ZIGFLAGS} $(usex debug -Doptimize=Debug -Doptimize=ReleaseSafe) --color on --prominent-compile-errors --system "${WORKDIR}" --search-prefix "${BROOT}/usr" --prefix "${EPREFIX}/usr"  "${@}" install
 	einfo "${@}"
-	DESTDIR="${WORKDIR}/${P}/build" "${@}" || die 'zig build failed'
+	DESTDIR="${S}/build" "${@}" || die 'zig build failed'
 }
 
 # @FUNCTION: zig_src_install
 # @DESCRIPTION:
-# Install the generated files
+# Install the generated files given they're in standard locations
 zig_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	cd build/usr || die
+	# regular files
 	insinto "${EPREFIX}/usr"
-	test -d include && doins -r include
-	test -d lib && doins -r lib
-	test -d lib64 && doins -r lib64
-	test -d libexec && doins -r libexec
 	test -d share && doins -r share
-	insopts -m0755
-	test -d bin && doins -r bin
-	test -d sbin && doins -r sbin
+	# headers
+	test -d include && doheader -r include/*
+	# libraries (both static and shared)
+	if [ -d lib ]; then
+		for lib in lib/*.so; do
+			dolib.so "$lib"
+		done
+		for lib in lib/*.a; do
+			dolib.a "$lib"
+		done
+		# TODO handle subdirectories?
+	fi
+	if [ -d libexec ];then
+		exeinto "${EPREFIX}/usr/libexec"
+		for file in libexec/*;do
+			if [ -x "$file" ]; then
+				doexe "$file"
+			fi
+			# TODO handle subdirectories?
+		done
+	fi
+	test -d bin && dobin bin/*
+	test -d sbin && dosbin sbin/*
 }
 # @FUNCTION: zig_src_test
 # @DESCRIPTION:
