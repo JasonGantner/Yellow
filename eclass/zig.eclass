@@ -54,9 +54,9 @@ IUSE="${IUSE} debug"
 zig_src_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 	# TODO add flags deduplication and cleanup
-	set -- zig build ${ZIGFLAGS} $(usex debug -Doptimize=Debug -Doptimize=ReleaseSafe) --color on --prominent-compile-errors --system "${WORKDIR}" --search-prefix "${BROOT}/usr" "${@}" install
+	set -- zig build ${ZIGFLAGS} $(usex debug -Doptimize=Debug -Doptimize=ReleaseSafe) --color on --prominent-compile-errors --system "${WORKDIR}" --search-prefix "${BROOT}/usr" --prefix "${EPREFIX}/usr"  "${@}" install
 	einfo "${@}"
-	"${@}" || die 'zig build failed'
+	DESTDIR="${WORKDIR}/${P}/build" "${@}" || die 'zig build failed'
 }
 
 # @FUNCTION: zig_src_install
@@ -65,7 +65,7 @@ zig_src_compile() {
 zig_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	cd zig-out || die
+	cd build/usr || die
 	insinto "${EPREFIX}/usr"
 	test -d include && doins -r include
 	test -d lib && doins -r lib
