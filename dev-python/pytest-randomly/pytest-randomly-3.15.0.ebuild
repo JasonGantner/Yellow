@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Pytest plugin to randomly order tests and control random.seed"
 HOMEPAGE="https://github.com/pytest-dev/pytest-randomly/"
-SRC_URI="https://github.com/pytest-dev/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/pytest-dev/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

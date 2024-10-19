@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Pretty and useful exceptions in Python, automatically."
 HOMEPAGE="https://github.com/qix-/better-exceptions"
-SRC_URI="https://github.com/qix-/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/qix-/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

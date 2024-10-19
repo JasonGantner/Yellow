@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Generic programming library for Python"
 HOMEPAGE="https://generic.readthedocs.org"
-SRC_URI="https://github.com/gaphor/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/gaphor/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

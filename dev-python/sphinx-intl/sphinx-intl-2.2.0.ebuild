@@ -10,9 +10,9 @@ inherit distutils-r1
 
 DESCRIPTION="Sphinx utility that make it easy to translate and to apply translation."
 HOMEPAGE="https://github.com/sphinx-dox/sphinx-intl/"
-SRC_URI="https://github.com/sphinx-doc/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/sphinx-doc/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
-LICENSE="BSD-2-Clause"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
