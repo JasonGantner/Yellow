@@ -22,6 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="pie"
+RESTRICT="test" # Remove once test fix has been accepted upstream
 
 DEPEND="
 	dev-libs/wayland
