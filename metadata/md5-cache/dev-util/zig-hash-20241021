@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Shell script to compute zig dependency hashes
+EAPI=8
+HOMEPAGE=https://zig.news/michalsieron/buildzigzon-dependency-hashes-47kj
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=app-alternatives/sh sys-apps/coreutils sys-apps/findutils sys-apps/sed
+SLOT=0
+SRC_URI=https://github.com/michalsieron/zig-hash-sh/raw/fc8a4eab26779d701e7a2555e0becc8c8d920b26/zig-hash.sh -> zig-hash-20241021.sh
+_md5_=bbc3eaf827b201d23072b41d94aa92de

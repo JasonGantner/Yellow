@@ -5,7 +5,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517="setuptools"
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=(python3_{11..13} python3_13t)
 inherit distutils-r1
 
 DESCRIPTION="Rule your architecture like a real developer"

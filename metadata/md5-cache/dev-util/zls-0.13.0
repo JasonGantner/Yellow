@@ -1,0 +1,14 @@
+BDEPEND=|| ( dev-lang/zig:0.13 dev-lang/zig-bin:0.13 ) || ( dev-lang/zig dev-lang/zig-bin ) >=dev-util/zig-hash-20241021
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Zig language server
+EAPI=8
+HOMEPAGE=https://github.com/zigtools/zls
+INHERIT=zig
+IUSE=pie +threads doc debug test
+KEYWORDS=~amd64
+LICENSE=MIT
+RESTRICT=!test? ( test )
+SLOT=0.13
+SRC_URI=https://github.com/zigtools/zls/archive/refs/tags/0.13.0.tar.gz -> zls-0.13.0.gh.tar.gz https://github.com/ziglibs/known-folders/archive/0ad514dcfb7525e32ae349b9acc0a53976f3a9fa.tar.gz -> known-folders-0ad514dcfb7525e32ae349b9acc0a53976f3a9fa.gh.tar.gz https://github.com/ziglibs/diffz/archive/ef45c00d655e5e40faf35afbbde81a1fa5ed7ffb.tar.gz -> diffz-ef45c00d655e5e40faf35afbbde81a1fa5ed7ffb.gh.tar.gz https://raw.githubusercontent.com/ziglang/zig/0.13.0/doc/langref.html.in -> zig-langref-0.13.0.html.in
+_eclasses_=zig	4afd171f07718d584cafc2b970ad66b4
+_md5_=0cf5b58e910ef7538c2a6874b9c21e0e
