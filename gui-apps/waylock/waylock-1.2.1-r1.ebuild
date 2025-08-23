@@ -3,6 +3,8 @@
 
 EAPI=8
 
+ZIG_COMPAT=(0_13)
+
 inherit verify-sig zig
 
 DESCRIPTION="Small screenlocker for Wayland compositors"

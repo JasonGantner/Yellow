@@ -1,0 +1,15 @@
+BDEPEND=>=dev-util/zig-hash-20241021 zig_slot_0.14? ( || ( dev-lang/zig:0.14 dev-lang/zig-bin:0.14 ) )
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Zig language server
+EAPI=8
+HOMEPAGE=https://github.com/zigtools/zls
+INHERIT=zig
+IUSE=pie +threads doc debug test +zig_slot_0_14
+KEYWORDS=~amd64
+LICENSE=MIT
+REQUIRED_USE=^^ ( zig_slot_0_14 )
+RESTRICT=!test? ( test )
+SLOT=0.14
+SRC_URI=https://github.com/zigtools/zls/archive/refs/tags/0.14.0.tar.gz -> zls-0.14.0.gh.tar.gz https://github.com/ziglibs/known-folders/archive/0ad514dcfb7525e32ae349b9acc0a53976f3a9fa.tar.gz -> known-folders-0ad514dcfb7525e32ae349b9acc0a53976f3a9fa.gh.tar.gz https://github.com/ziglibs/diffz/archive/ef45c00d655e5e40faf35afbbde81a1fa5ed7ffb.tar.gz -> diffz-ef45c00d655e5e40faf35afbbde81a1fa5ed7ffb.gh.tar.gz https://raw.githubusercontent.com/ziglang/zig/0.14.0/doc/langref.html.in -> zig-langref-0.14.0.html.in
+_eclasses_=zig	53312e897e6c88032702e6427a8c5b3f
+_md5_=704f4fd92bf9574b501ef6aabd8bffd7

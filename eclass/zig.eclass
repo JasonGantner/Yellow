@@ -21,22 +21,47 @@ esac
 if [[ ! ${_ZIG_ECLASS} ]]; then
 _ZIG_ECLASS=1
 
+IUSE="${IUSE} debug test"
+RESTRICT="${RESTRICT} !test? ( test )"
+
+# @ECLASS_VARIABLE: ZIG_COMPAT
+# @PRE_INHERIT
+# @REQUIRED
+# @DESCRIPTION:
+# A list of zig slots supported by the package, default slot first, replace dot with underscore
+#
+# Example:
+# @CODE
+# ZIG_COMPAT=( 0_14 0_13 0_15 )
+# @CODE
+
+ if [[ ${ZIG_COMPAT@a} != *a* ]]; then
+     die "ZIG_COMPAT must be set to an array before inheriting ${ECLASS}"
+ fi
+
+IUSE+=" +zig_slot_${ZIG_COMPAT[0]}"
+local nondefaults=( "${ZIG_COMPAT[@]}" )
+unset 'nondefaults[0]'
+IUSE+=" ${nondefaults[*]/#/zig_slot_}"
+unset nondefaults 
+
 # @ECLASS_VARIABLE: ZIG_DEPEND
 # @OUTPUT_VARIABLE
 # @DESCRIPTION:
 # zig packages default dependencies automatically added unless ZIG_OPTIONAL is defined
 
 ZIG_DEPEND="
-	|| (
-		dev-lang/zig
-		dev-lang/zig-bin
-	)
 	>=dev-util/zig-hash-20241021
 	"
-[[ ! ${ZIG_OPTIONAL} ]] && BDEPEND="${ZIG_DEPEND}"
-
-IUSE="${IUSE} debug test"
-RESTRICT="${RESTRICT} !test? ( test )"
+for ZIG_SLOT in "${ZIG_COMPAT[@]}";do
+	local slot="${ZIG_SLOT//_/.}"
+	ZIG_DEPEND+="
+	zig_slot_${ZIG_SLOT}? ( || (
+		dev-lang/zig:${slot}
+		dev-lang/zig-bin:${slot}
+	) )
+	"
+done
 
 # @ECLASS_VARIABLE: ZIGFLAGS
 # @USER_VARIABLE
@@ -93,8 +118,13 @@ ezig() {
 		esac
 	done
 	optim=$(usex debug -Doptimize=Debug "${optim:--Doptimize=ReleaseSafe}")
-	cpu="${cpu:--Dcpu=baseline}" 
-	set -- zig build --color on --prominent-compile-errors "${EZIG_FLAGS[@]}" "${user_flags[@]}" "$cpu" "$optim" \
+	cpu="${cpu:--Dcpu=baseline}"
+	# dirty use zig_slot_* to ZIG_SLOT=* conversion
+	ZIG_SLOT="$(usex zig_slot_0_13 0.13 $(\
+		usex zig_slot_0_14 0.14 $(\
+		usex zig_slot_0_15 0.15 'invalid')))"
+	ZIG="$(find $(dirname $(command -v zig)) -type x -name 'zig-*'"${ZIG_SLOT}"'.?' -print)"
+	set -- "${ZIG}" build --color on --prominent-compile-errors "${EZIG_FLAGS[@]}" "${user_flags[@]}" "$cpu" "$optim" \
 		--system "${EZIG_SYS_SRC}/p" --search-prefix "${BROOT}/usr" --prefix "${EPREFIX}/usr" "${@}" 
 
 	einfo "${@}"
@@ -175,5 +205,7 @@ zig_src_test() {
 fi
 
 if [[ ! ${ZIG_OPTIONAL} ]]; then
+	BDEPEND="${ZIG_DEPEND}"
+	REQUIRED_USE="^^ ( ${ZIG_COMPAT[@]/#/zig_slot_} )"
 	EXPORT_FUNCTIONS src_prepare src_compile src_install src_test
 fi

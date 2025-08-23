@@ -1,0 +1,17 @@
+BDEPEND=virtual/pkgconfig man? ( app-text/scdoc ) >=dev-util/zig-hash-20241021 zig_slot_0.14? ( || ( dev-lang/zig:0.14 dev-lang/zig-bin:0.14 ) ) zig_slot_0.13? ( || ( dev-lang/zig:0.13 dev-lang/zig-bin:0.13 ) )
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/libevdev dev-libs/wayland dev-libs/wayland-protocols gui-libs/wlroots x11-libs/pixman x11-libs/libxkbcommon
+DESCRIPTION=dynamic tiling Wayland compositor with flexible runtime configuration
+EAPI=8
+HOMEPAGE=https://isaacfreund.com/software/river/
+INHERIT=zig
+IUSE=man pie X debug test +zig_slot_0_14 zig_slot_0_13
+KEYWORDS=~amd64
+LICENSE=GPL-3+ ISC CC-BY-SA-4.0
+RDEPEND=dev-libs/libevdev dev-libs/wayland dev-libs/wayland-protocols gui-libs/wlroots x11-libs/pixman x11-libs/libxkbcommon
+REQUIRED_USE=^^ ( zig_slot_0_14 zig_slot_0_13 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://codeberg.org/river/river/archive/v0.3.5.tar.gz -> river-0.3.5.tar.gz https://codeberg.org/ifreund/zig-pixman/archive/v0.2.0.tar.gz -> zig-pixman-0.2.0.tar.gz https://codeberg.org/ifreund/zig-wayland/archive/v0.2.0.tar.gz -> zig-wayland-0.2.0.tar.gz https://codeberg.org/ifreund/zig-wlroots/archive/v0.18.0.tar.gz -> zig-wlroots-0.18.0.tar.gz https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.2.0.tar.gz -> zig-xkbcommon-0.2.0.tar.gz
+_eclasses_=zig	53312e897e6c88032702e6427a8c5b3f
+_md5_=1d68542057fa5100f4bc347c21b71cd1

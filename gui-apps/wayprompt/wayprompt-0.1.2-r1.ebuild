@@ -3,6 +3,8 @@
 
 EAPI=8
 
+ZIG_COMPAT=(0_13 0_14)
+
 inherit zig
 
 DESCRIPTION="A multi-purpose (password-)prompt tool for Wayland"

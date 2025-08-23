@@ -3,8 +3,6 @@
 
 EAPI=8
 
-inherit zig
-
 DESCRIPTION="Zig language server"
 HOMEPAGE="https://github.com/zigtools/zls"
 SRC_URI="
@@ -18,16 +16,13 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="$(ver_cut 1-2)"
+ZIG_COMPAT=("${SLOT//./_}")
+
+inherit zig
+
 KEYWORDS="~amd64"
 
 IUSE="pie +threads doc"
-
-BDEPEND="
-	|| (
-		dev-lang/zig:${SLOT}
-		dev-lang/zig-bin:${SLOT}
-	)
-"
 
 src_configure() {
 	EZIG_FLAGS=(

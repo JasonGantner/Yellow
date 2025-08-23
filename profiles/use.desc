@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: GPL-2.0-or-later or MIT
+# SPDX-CopyrightText: Jason André Charles Gantner
+
+zig_slot_0_13 - Build using zig 0.13.*
+zig_slot_0_14 - Build using zig 0.14.*
+zig_slot_0_15 - Build using zig 0.15.*

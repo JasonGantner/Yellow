@@ -1,16 +1,17 @@
-BDEPEND=man? ( app-text/scdoc ) virtual/pkgconfig verify-sig? ( sec-keys/openpgp-keys-ifreund ) verify-sig? ( app-crypt/gnupg >=app-portage/gemato-20 ) || ( dev-lang/zig dev-lang/zig-bin ) >=dev-util/zig-hash-20241021
+BDEPEND=man? ( app-text/scdoc ) virtual/pkgconfig verify-sig? ( sec-keys/openpgp-keys-ifreund ) verify-sig? ( app-crypt/gnupg >=app-portage/gemato-20 ) >=dev-util/zig-hash-20241021 zig_slot_0.13? ( || ( dev-lang/zig:0.13 dev-lang/zig-bin:0.13 ) )
 DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-libs/wayland dev-libs/wayland-protocols sys-libs/pam x11-libs/libxkbcommon
 DESCRIPTION=Small screenlocker for Wayland compositors
 EAPI=8
 HOMEPAGE=https://codeberg.org/ifreund/waylock
 INHERIT=verify-sig zig
-IUSE=+man pie verify-sig debug test
+IUSE=+man pie verify-sig debug test +zig_slot_0_13
 KEYWORDS=~amd64
 LICENSE=ISC
 RDEPEND=dev-libs/wayland dev-libs/wayland-protocols sys-libs/pam x11-libs/libxkbcommon
+REQUIRED_USE=^^ ( zig_slot_0_13 )
 RESTRICT=test !test? ( test )
 SLOT=0
 SRC_URI=https://codeberg.org/ifreund/waylock/releases/download/v1.2.1/waylock-1.2.1.tar.gz verify-sig? ( https://codeberg.org/ifreund/waylock/releases/download/v1.2.1/waylock-1.2.1.tar.gz.sig ) https://codeberg.org/ifreund/zig-wayland/archive/v0.2.0.tar.gz -> zig-wayland-0.2.0.tar.gz https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.2.0.tar.gz -> zig-xkbcommon-0.2.0.tar.gz
-_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	4e83419d7fb5d336f6a4de8193968319	zig	4afd171f07718d584cafc2b970ad66b4
-_md5_=a3ab18fcf669470784e835240c7176ab
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	verify-sig	4e83419d7fb5d336f6a4de8193968319	zig	53312e897e6c88032702e6427a8c5b3f
+_md5_=4ad3679a6396237f95bfe451cbc04502

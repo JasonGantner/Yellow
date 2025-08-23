@@ -3,6 +3,8 @@
 
 EAPI=8
 
+ZIG_COMPAT=(0_14 0_13)
+
 inherit zig
 
 DESCRIPTION="dynamic tiling Wayland compositor with flexible runtime configuration"
