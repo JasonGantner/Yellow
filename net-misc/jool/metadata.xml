@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jason@gantner.pw</email>
+		<name>Jason André Charles Gantner</name>
+	</maintainer>
+	<use>
+		<flag name="iptables">Build xtable modules to enable <pkg>net-firewall/iptables</pkg> (legacy) support instead of relying on netfilters (accessible trough <pkg>net-firewall/nftables</pkg>)</flag>
+		<flag name="mapt">Enable NAT64 Jool implementing RFC6146</flag>
+		<flag name="nat64">Enable MAP-T Jool implementing RFC7597 and RFC7599</flag>
+		<flag name="siit">Enable SIIT Jool implementing RFCXXXX</flag>
+		<flag name="bash-completion">install completers for bash</flag>
+		<flag name="tools">Also build userspace tools to interact with the kernel modules
+		You SHOULD select this use flag unless you have other userspace tools to interact with jool
+		</flag>
+	</use>
+</pkgmetadata>
