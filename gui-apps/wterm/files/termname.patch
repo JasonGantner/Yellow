@@ -1,0 +1,10 @@
+diff --git a/config.def.h b/config.def.h
+index f0dd482..89106fc 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -72,2 +72,2 @@ static unsigned int cursorthickness = 2;
+-/* TERM value */
+-static char termname[] = "wterm-256color";
++/* TERM value --- set to xterm for compatibility */
++static char termname[] = "xterm-256color";
+
